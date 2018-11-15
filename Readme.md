@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/E4915/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/E4915/Controllers/HomeController.vb))
+* [DataHelper.cs](./CS/E4915/Models/DataHelper.cs) (VB: [DataHelper.vb](./VB/E4915/Models/DataHelper.vb))
+* [Product.cs](./CS/E4915/Models/Product.cs) (VB: [Product.vb](./VB/E4915/Models/Product.vb))
+* [_GridViewPartial.cshtml](./CS/E4915/Views/Home/_GridViewPartial.cshtml)
+* [Index.cshtml](./CS/E4915/Views/Home/Index.cshtml)
+<!-- default file list end -->
 # How to include/exclude columns when exporting GridView extension data
 
 
