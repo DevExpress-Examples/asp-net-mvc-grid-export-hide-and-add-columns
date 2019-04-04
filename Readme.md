@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [HomeController.cs](./CS/E4915/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/E4915/Controllers/HomeController.vb))
-* [Global.asax](./CS/E4915/Global.asax) (VB: [Global.asax.vb](./VB/E4915/Global.asax.vb))
+* [Global.asax](./CS/E4915/Global.asax) (VB: [Global.asax](./VB/E4915/Global.asax))
 * [Global.asax.cs](./CS/E4915/Global.asax.cs) (VB: [Global.asax.vb](./VB/E4915/Global.asax.vb))
 * [DataHelper.cs](./CS/E4915/Models/DataHelper.cs) (VB: [DataHelper.vb](./VB/E4915/Models/DataHelper.vb))
 * [Product.cs](./CS/E4915/Models/Product.cs) (VB: [Product.vb](./VB/E4915/Models/Product.vb))
