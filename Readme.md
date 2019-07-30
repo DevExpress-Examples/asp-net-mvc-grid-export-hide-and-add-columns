@@ -9,7 +9,7 @@
 <!-- default file list end -->
 # How to include/exclude columns when exporting GridView extension data
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e4915)**
+**[[Run Online]](https://codecentral.devexpress.com/e4915/)**
 <!-- run online end -->
 
 
