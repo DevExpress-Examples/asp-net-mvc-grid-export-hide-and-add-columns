@@ -3,23 +3,55 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E4915)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [HomeController.cs](./CS/E4915/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/E4915/Controllers/HomeController.vb))
-* [DataHelper.cs](./CS/E4915/Models/DataHelper.cs) (VB: [DataHelper.vb](./VB/E4915/Models/DataHelper.vb))
-* [Product.cs](./CS/E4915/Models/Product.cs) (VB: [Product.vb](./VB/E4915/Models/Product.vb))
-* [_GridViewPartial.cshtml](./CS/E4915/Views/Home/_GridViewPartial.cshtml)
-* [Index.cshtml](./CS/E4915/Views/Home/Index.cshtml)
-<!-- default file list end -->
-# How to include/exclude columns when exporting GridView extension data
+# GridView for ASP.NET MVC - How to hide and add columns in an exported document
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e4915/)**
 <!-- run online end -->
 
+This example demonstrates how to use different grid setting  to display the grid in the view and to export its data. 
 
-<p>This example demonstrates how to use different GridView settings to display the grid in the view and to export its data. In this example, different sets of columns are used.</p><p>The main idea of this approach is to pass a parameter to the method that is used for creating GridViewSettings to indicate if the settings are created to display the grid or export it.</p>
+![](grid.png)
 
-<br/>
+The main idea of this approach is to pass a parameter to the method that creates [GridViewSettings](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings) to indicate if the settings are created to display the grid or export data.
 
+**Display Grid**
+``` razor
+@Html.DevExpress().GridView(HomeController.ExportHelper.GetGridViewSettings(false)).Bind(Model).GetHtml()
+```
+
+**Export Data**
+```csharp
+public ActionResult Export() {
+    var model = Product.GetProducts();
+    return GridViewExtension.ExportToPdf(ExportHelper.GetGridViewSettings(true), model);
+}
+```
+
+In this example, the [Columns](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.Columns) collection contains different set of columns based on the `isExport` parameter value.
+
+```csharp
+public static class ExportHelper {
+    static public GridViewSettings GetGridViewSettings(bool isExport) {
+        GridViewSettings settings = new GridViewSettings();
+        // ...
+        if (isExport) {
+            //Columns only to export
+            settings.Columns.Add("UnitsInStock");
+            settings.Columns.Add("UnitsOnOrder");
+        } else {
+            //Columns only to display on the web page
+            settings.Columns.Add("UnitPrice");
+        }
+        return settings;
+    }
+}
+```
+
+
+## Files to Review
+
+* [HomeController.cs](./CS/E4915/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/E4915/Controllers/HomeController.vb))
+* [DataHelper.cs](./CS/E4915/Models/DataHelper.cs) (VB: [DataHelper.vb](./VB/E4915/Models/DataHelper.vb))
+* [_GridViewPartial.cshtml](./CS/E4915/Views/Home/_GridViewPartial.cshtml)
 
