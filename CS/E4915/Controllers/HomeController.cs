@@ -10,7 +10,6 @@ namespace E4915.Controllers
 public class HomeController : Controller {
         public ActionResult Index() {
             ViewBag.Message = "Welcome to DevExpress Extensions for ASP.NET MVC!";
-
             return View();
         }
 
@@ -35,10 +34,8 @@ public class HomeController : Controller {
                 };
 
                 settings.KeyFieldName = "ProductID";
-
                 settings.Columns.Add("ProductID");
                 settings.Columns.Add("ProductName");
-
                 if (isExport) {
                     //Columns only to export
                     settings.Columns.Add("UnitsInStock");
@@ -48,7 +45,6 @@ public class HomeController : Controller {
                     //Columns only to display on the web page
                     settings.Columns.Add("UnitPrice");
                 }
-
                 return settings;
             }
         }
