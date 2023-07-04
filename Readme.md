@@ -9,7 +9,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/e4915/)**
 <!-- run online end -->
 
-This example demonstrates how to use different grid setting  to display the grid in the view and to export its data. 
+This example demonstrates how to use different grid settings to display the grid in the view and to export its data.
 
 ![](grid.png)
 
@@ -28,7 +28,7 @@ public ActionResult Export() {
 }
 ```
 
-In this example, the [Columns](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.Columns) collection contains different set of columns based on the `isExport` parameter value.
+In this example, the [Columns](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.Columns) collection contains a different set of columns based on the `isExport` parameter value.
 
 ```csharp
 public static class ExportHelper {
