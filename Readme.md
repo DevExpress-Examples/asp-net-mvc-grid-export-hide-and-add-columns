@@ -6,7 +6,7 @@
 
 # GridView for ASP.NET MVC - How to hide and add columns in an exported document
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e4915/)**
+**[[Run Online]](https://codecentral.devexpress.com/128551750/)**
 <!-- run online end -->
 
 This example demonstrates how to use different grid settings to display the grid in the view and to export its data.
